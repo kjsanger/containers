@@ -40,7 +40,7 @@ jobs:
           generateReleaseNotes: true
 
     outputs:
-      isRelease: ${{ github.sha == env.MASTER_SHA }}
+      isRelease: ${{ github.sha == github.sha }} # ${{ github.sha == env.MASTER_SHA }}
 
   deploy:
     runs-on: ubuntu-latest
